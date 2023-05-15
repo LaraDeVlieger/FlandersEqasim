@@ -30,7 +30,7 @@ mkdir output
 
 The way `config.yml` is configured it will create the relevant output files in the `output` folder.
 
-Next all of the data sources need to be implemented and prepared. Most of those for the current case study are already included, however some are too big for an online repository. These can be downloaded directly from the source or can be provided additionally by the authors. More about this is provided in [the document about the data](docs/data.md). 
+Next all of the data sources need to be implemented and prepared. Most of those for the current case study are already included, however some are too big for an online repository. These can be downloaded directly from the source or can be provided additionally by the authors in a zipped folder. More about this is provided in [the document about the data](docs/data.md). 
 
 The next step is to run the pipeline, call the [synpp](https://github.com/eqasim-org/synpp) runner:
 
