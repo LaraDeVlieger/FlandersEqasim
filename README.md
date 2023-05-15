@@ -1,4 +1,4 @@
-# LeuvenEqasim
+# FlandersEqasim
 This repository contains the code to create an open data synthetic population of the Flanders (including Brussels). It can also be adapted for other regions in Belgium (Wallonia or more specific regions like Antwerp). This project is an adaptation of the [Eqasim application](https://github.com/eqasim-org/ile-de-france) build by S. Hörl and M. Balac. 
 
 ## General
@@ -10,7 +10,7 @@ Such a synthetic population is useful for many research and planning application
 
 To use the code, you have to clone the repository with `git`:
 ```bash
-git clone https://github.com/LaraDeVlieger/LeuvenEqasim.git
+git clone https://github.com/LaraDeVlieger/FlandersEqasim.git
 ```
 After downloading the repository, the first thing to do is set up a new environment with the correct version of each package. A separate environment is recommended espesially for the use of the [synpp](https://github.com/eqasim-org/synpp) package. The full list can be found in [this document](requirements.txt). 
 
