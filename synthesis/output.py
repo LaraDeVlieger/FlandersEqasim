@@ -19,7 +19,7 @@ def configure(context):
     context.stage("documentation.meta_output")
 
     context.config("output_path")
-    context.config("output_prefix", "ile_de_france_")
+    context.config("output_prefix", "Flanders_")
 
 def validate(context):
     output_path = context.config("output_path")

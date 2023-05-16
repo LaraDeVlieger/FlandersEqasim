@@ -7,16 +7,16 @@ def configure(context):
     # absolute paths are used here, please change accordingly
 
     context.config("data_path")
-    context.config("residential_path", r"C:\Users\larad\OneDrive\Documenten\school\Leuven\data\poidpy\Residential.shp")
+    context.config("residential_path", "poidpy/Residential.shp")
 
     context.config("data_path")
-    context.config("zone_path", r"C:\Users\larad\OneDrive\Documenten\school\Leuven\data\zonal_data\sh_statbel_statistical_sectors_3812_20220101.shp")
+    context.config("zone_path", "zonal_data/sh_statbel_statistical_sectors_3812_20220101.shp")
 
     context.stage("data.spatial.iris")
 
 def execute(context):
         # Read the shapefiles generated from Poidpy
-        residential = gpd.read_file(context.config("residential_path"))[["classifica", "geometry"]]
+        residential = gpd.read_file("%s/%s" % (context.config("data_path"), context.config("residential_path")))[["classifica", "geometry"]]
         residential = residential.rename(columns={
             'classifica': 'Type'
         })
@@ -26,7 +26,7 @@ def execute(context):
         residential = residential.to_crs(new_crs)
 
         # Read the zoning shapefile
-        zone = gpd.read_file(context.config("zone_path"))[["CNIS5_2022", "CS01012022", "geometry"]]
+        zone = gpd.read_file("%s/%s" % (context.config("data_path"), context.config("zone_path")))[["CNIS5_2022", "CS01012022", "geometry"]]
         zone = zone.rename(columns={
             'CS01012022': 'iris_id',
             'CNIS5_2022': 'commune_id'
