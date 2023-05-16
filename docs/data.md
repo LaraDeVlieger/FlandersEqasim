@@ -89,6 +89,6 @@ a few are actually relevant for the pipeline. Those are:
 
 Most of the data sources are provided for the whole of Belgium, this means that filtering out the data can result in specific populations for certain regions. 
 
-There are two main sources which lay on the basis of this information, the census and the information from poidpy. In the case of poidpy, the residential and the activity layers are generated using a simple polygon shapefile of the zone of interest. It can be easily adjusted depending on the chosen area of study by running poidoy on the given region. 
+There are two main sources which lay on the basis of this information, the census and the information from poidpy. In the case of poidpy, the residential and the activity layers are generated using a simple polygon shapefile of the zone of interest. It can be easily adjusted depending on the chosen area of study by running poidpy on the given region. 
 
 As most of the merging is done on the basis of the census data it is very important to define the requested zones in this part. At the moment here only the zones for Flanders and Brussels are selected, however it is very easy to filter out more zones. The filtering is now done on the level of the provinces in the file `data\census\filtered.py`, so choosing a region on this level is the easiest as it means just giving a different code as parameter. However the code in this file can also be adapted for a more precise level of zones. 
