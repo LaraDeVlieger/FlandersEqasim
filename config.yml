@@ -2,14 +2,14 @@
 ## based on the synpp package
 
 # This is the path to a directory where the pipeline can store temporary data
-working_directory: C:\Users\larad\OneDrive\Documenten\school\Leuven\cache
+working_directory: C:\Users\larad\LeuvenEqasim\cache
 
 # This section defines which parts of the pipeline should be run
 run:
   - synthesis.output # To create the output population in the output_path (see below)
   #- matsim.output # Uncomment, if you want to run the full simulation (you'll need Java for that)
   #- synthesis.population.income
-  #- data.od.weighted
+  #- data.od.raw
 
 # Here the configuraiton of the pipeline starts
 config:
@@ -24,8 +24,8 @@ config:
   random_seed: 1234
 
   # Paths to the input data and where the output should be stored
-  data_path: C:\Users\larad\OneDrive\Documenten\school\Leuven\data
-  output_path: C:\Users\larad\OneDrive\Documenten\school\Leuven\output
+  data_path: C:\Users\larad\LeuvenEqasim\data
+  output_path: C:\Users\larad\LeuvenEqasim\output
 
   # Only interesting if you run the simulation
   java_memory: 14G

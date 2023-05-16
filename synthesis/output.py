@@ -19,7 +19,7 @@ def configure(context):
     context.stage("documentation.meta_output")
 
     context.config("output_path")
-    context.config("output_prefix", "Flanders_")
+    context.config("output_prefix", "ile_de_france_")
 
 def validate(context):
     output_path = context.config("output_path")
@@ -43,6 +43,8 @@ def execute(context):
         "income",
         "census_household_id"
     ]]
+    
+    output_prefix = "Flanders_"
 
     df_households.to_csv("%s/%shouseholds.csv" % (output_path, output_prefix), sep = ";", index = None, line_terminator = "\n")
 
